@@ -917,6 +917,11 @@ MonoBehaviour:
   sensitivity: 2
   smoothing: 2
   invertY: 1
+--- !u!1 &371255527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1800725127586568702, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+  m_PrefabInstance: {fileID: 1749220731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,6 +1661,22 @@ MonoBehaviour:
   headPositionOffset: {x: 0, y: 0, z: 0}
   rightHandRotationOffset: {x: 0, y: 0, z: 310}
   leftHandRotationOffset: {x: 0, y: 0, z: 50}
+  handControllerModels:
+  - {fileID: 1749220735}
+  - {fileID: 1887461166}
+  - {fileID: 594717558}
+  - {fileID: 1749220734}
+  - {fileID: 58545068}
+  - {fileID: 1508731418}
+  hand:
+  - {fileID: 1756641477}
+  - {fileID: 371255527}
+  XRIMM: {fileID: 514177967}
+--- !u!1 &594717558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4911947107372535036, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+  m_PrefabInstance: {fileID: 1749220731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &621175332
 GameObject:
   m_ObjectHideFlags: 0
@@ -3073,6 +3094,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499958711}
   m_CullTransparentMesh: 1
+--- !u!1 &1508731418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3421079552115229881, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+  m_PrefabInstance: {fileID: 1749220731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1532626313
 GameObject:
   m_ObjectHideFlags: 0
@@ -3529,17 +3555,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin Hands (XR Rig)
       objectReference: {fileID: 0}
+    - target: {fileID: 6008492305507399660, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+      propertyPath: m_ActionAssets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008492305507399660, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+      propertyPath: 'm_ActionAssets.Array.data[1]'
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: bf9889175c13b2148a4979480e1bd5cf, type: 3}
     - target: {fileID: 6398742847350777855, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6468442521412095314, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_TrackedHandModeStarted.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6468442521412095314, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_MotionControllerModeStarted.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6468442521412095314, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_TrackedHandModeStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -3735,6 +3769,11 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &1756641477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6355494128053973299, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+  m_PrefabInstance: {fileID: 1749220731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1758072712
 GameObject:
   m_ObjectHideFlags: 0

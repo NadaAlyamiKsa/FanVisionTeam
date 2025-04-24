@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem.XR;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 namespace VertextFormCore
 {
@@ -20,6 +23,56 @@ namespace VertextFormCore
         public Vector3 headPositionOffset;
         public Vector3 rightHandRotationOffset;
         public Vector3 leftHandRotationOffset;
+        public List<GameObject> handControllerModels;
+        public List<GameObject> hand;
+        public XRInputModalityManager XRIMM;
+        void Start()
+        {
+            HandAndControllerSync();
+        }
+        private void HandAndControllerSync()
+        {
+            XRIMM.trackedHandModeStarted.AddListener(OnTrackedHandModeStarted);
+            XRIMM.trackedHandModeEnded.AddListener(OnTrackedHandModeEnded);
+            XRIMM.motionControllerModeStarted.AddListener(OnMotionControllerModeStarted);
+            XRIMM.motionControllerModeEnded.AddListener(OnMotionControllerModeEnded);
+        }
+
+
+        private void OnMotionControllerModeStarted()
+        {
+            Debug.Log("Hand Controller Modfe Started");
+            foreach (GameObject handController in handControllerModels)
+            {
+                handController.SetActive(true);
+            }
+            foreach (GameObject hand in hand)
+            {
+                hand.SetActive(false);
+            }
+        }
+        private void OnMotionControllerModeEnded()
+        {
+
+        }
+
+        private void OnTrackedHandModeEnded()
+        {
+
+        }
+
+        private void OnTrackedHandModeStarted()
+        {
+            Debug.Log("Hand Modfe Started");
+            foreach (GameObject handController in handControllerModels)
+            {
+                handController.SetActive(false);
+            }
+            foreach (GameObject hand in hand)
+            {
+                hand.SetActive(true);
+            }
+        }
 
         // Update is called once per frame
         void Update()
