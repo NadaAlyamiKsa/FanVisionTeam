@@ -10370,6 +10370,30 @@ PrefabInstance:
       propertyPath: <ConvaiPlayerDataSO>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: b26362f01bc6ac04198ecb9bcf959f62, type: 2}
+    - target: {fileID: 2543859362273371438, guid: e9f1f6847d063d5449e80affe2e54206, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543859362273371438, guid: e9f1f6847d063d5449e80affe2e54206, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543859362273371438, guid: e9f1f6847d063d5449e80affe2e54206, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118536868883248410, guid: e9f1f6847d063d5449e80affe2e54206, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118536868883248410, guid: e9f1f6847d063d5449e80affe2e54206, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118536868883248410, guid: e9f1f6847d063d5449e80affe2e54206, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6271551190536227607, guid: e9f1f6847d063d5449e80affe2e54206, type: 3}
       propertyPath: m_Color.a
       value: 0
