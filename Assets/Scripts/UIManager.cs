@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour
 {
     public GameObject nameScreen;
     public GameObject menuScreen;
+    public GameObject guideScreen;
     public GameObject languageSelectionScreen;
     public TMP_Dropdown languageDropDown;
     public TMP_InputField userNameInput;
@@ -35,6 +36,11 @@ public class UIManager : MonoBehaviour
         {
             PlayerPrefs.SetString("Language", value);
         }
+    }
+
+    public void OnTapThankYou()
+    {
+        ScreenHandler(nameScreen);
     }
 
 

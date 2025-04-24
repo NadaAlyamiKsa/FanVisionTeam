@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: <TargetObject>k__BackingField
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1883388557950950016, guid: 2b5f1e28aa2eab348a978965504281e6, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3891811564903300963, guid: 2b5f1e28aa2eab348a978965504281e6, type: 3}
       propertyPath: m_RootOrder
       value: -2
@@ -2514,6 +2518,10 @@ PrefabInstance:
       propertyPath: <TargetObject>k__BackingField
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1883388557950950016, guid: 2b5f1e28aa2eab348a978965504281e6, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3891811564903300963, guid: 2b5f1e28aa2eab348a978965504281e6, type: 3}
       propertyPath: m_RootOrder
       value: -2
@@ -4701,7 +4709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.272
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4709,7 +4717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.028
+      value: 4.758
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalRotation.w
