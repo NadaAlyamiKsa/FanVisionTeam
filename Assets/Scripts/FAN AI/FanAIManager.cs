@@ -18,7 +18,9 @@ public class FanAIManager : MonoBehaviour
     public GameObject responseUI;
     public GameObject speakingObject;
     public GameObject startRecordBtn;
+    public GameObject startRecord2Btn;
     public GameObject stopRecordBtn;
+    public GameObject stopRecord2Btn;
     public bool isRecording;
     public bool recordingStop;
     public bool isSpeaking;
@@ -82,7 +84,9 @@ public class FanAIManager : MonoBehaviour
     public void ButtonHandler(GameObject Obj)
     {
         startRecordBtn.SetActive(startRecordBtn.name == Obj.name);
+        startRecord2Btn.SetActive(startRecord2Btn.name == Obj.name);
         stopRecordBtn.SetActive(stopRecordBtn.name == Obj.name);
+        stopRecord2Btn.SetActive(stopRecord2Btn.name == Obj.name);
     }
 
     public void SetResponseText(string response)
