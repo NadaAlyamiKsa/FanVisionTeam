@@ -6,11 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/HomeScene.unity
+    guid: 8cc9935411dd837488a1f2546792199c
+  - enabled: 1
+    path: Assets/Scenes/StadiumScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Fan AI.unity
+    guid: 656e6fbb4d18dab4d953272e19e7a365
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: a3f479cd246a1de4f8584b65d5467db1, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 65eda66e9d28843e68681a85211a0be6, type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 7417cf7991a564b9d868f6e50023bb8f, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7a7970b4603a5a94e829affc5f0c9008, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 9cfb797f7b487ed48bc018b3aa66b3cd, type: 2}
   m_UseUCBPForAssetBundles: 0
