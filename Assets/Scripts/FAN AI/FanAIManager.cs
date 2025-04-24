@@ -1,4 +1,5 @@
 using Convai.Scripts.Runtime.Core;
+using Convai.Scripts.Runtime.PlayerStats;
 using DG.Tweening;
 using System.Collections;
 using TMPro;
@@ -8,14 +9,11 @@ using UnityEngine.UI;
 public class FanAIManager : MonoBehaviour
 {
     public bool init;
-    public ConvaiNPC NPC;
     public bool start;
     public bool stop;
     public GameObject firstScreen;
     public GameObject secondScreen;
     public GameObject thirdScreen;
-    public GameObject initButton;
-    public GameObject aiParent;
     public TextMeshProUGUI responseText;
     public GameObject responseUI;
     public GameObject speakingObject;
@@ -30,7 +28,7 @@ public class FanAIManager : MonoBehaviour
     public ConvaiNPC arabicCharacter;
     public ConvaiNPC englishCharacter;
     public ConvaiNPC currentNPC;
-
+    public ConvaiPlayerDataSO convaiPlayerDataSO;
     public static FanAIManager instance;
 
     private void Awake()
@@ -42,19 +40,29 @@ public class FanAIManager : MonoBehaviour
     }
 
     void Start()
-    {
-        StartCoroutine(IEOnBoardingUI());
-        AnimateSpeakingObject();
+    {   
+        //StartCoroutine(IEOnBoardingUI());
+        if (PlayerPrefs.GetString("Language")=="English")
+        {
+            EnableEnglish();
+        }
+        else
+        {
+            EnableArabic();
+        }
+        convaiPlayerDataSO.PlayerName = PlayerPrefs.GetString("UserName");
     }
 
     public void EnableArabic()
     {
+        currentNPC = arabicCharacter;
         arabicCharacter.gameObject.SetActive(true);
         englishCharacter.gameObject.SetActive(false);
     }
 
-    public void OnEnable()
+    public void EnableEnglish()
     {
+        currentNPC = englishCharacter;
         arabicCharacter.gameObject.SetActive(false);
         englishCharacter.gameObject.SetActive(true);
     }
@@ -64,7 +72,6 @@ public class FanAIManager : MonoBehaviour
         firstScreen.SetActive(false);
         secondScreen.SetActive(true);
         yield return new WaitForSeconds(4f);
-        initButton.SetActive(true);
         yield return new WaitForSeconds(2f);
         secondScreen.SetActive(false);
         thirdScreen.SetActive(true);
@@ -91,7 +98,7 @@ public class FanAIManager : MonoBehaviour
         recordingStop = false;
         isRecording = true;
         ButtonHandler(stopRecordBtn);
-        NPC.StartListening();
+        currentNPC.StartListening();
     }
 
     public void StopRecording()
@@ -99,7 +106,7 @@ public class FanAIManager : MonoBehaviour
         recordingStop = true;
         isRecording = false;
         ButtonHandler(startRecordBtn);
-        NPC.StopListening();
+        currentNPC.StopListening();
         responseUI.SetActive(false);
         speakingObject.SetActive(true);
     }
@@ -124,25 +131,9 @@ public class FanAIManager : MonoBehaviour
     }
     public void InitAvatar()
     {
-        initButton.SetActive(false);
-        aiParent.SetActive(true);
-        NPC.gameObject.SetActive(true);
+        currentNPC.gameObject.SetActive(true);
     }
 
-    public void Quit()
-    {
-        StartCoroutine(IEQuit());
-        Debug.LogError("Quit");
-    }
-
-    public IEnumerator IEQuit()
-    {
-        while (NPC.IsCharacterTalking)
-        {
-            yield return new WaitForSeconds(1);
-        }
-        Application.Quit();
-    }
     public void AnimateSpeakingObject()
     {
         /*for (int i = 0; i < animDots.Length; i++)
