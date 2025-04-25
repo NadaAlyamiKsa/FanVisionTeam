@@ -53,6 +53,7 @@ public class FanAIManager : MonoBehaviour
             EnableArabic();
         }
         convaiPlayerDataSO.PlayerName = PlayerPrefs.GetString("UserName");
+        convaiPlayerDataSO.DefaultPlayerName = PlayerPrefs.GetString("UserName");
     }
 
     public void EnableArabic()
