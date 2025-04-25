@@ -8,7 +8,7 @@ using UnityEditor;
 namespace Convai.Scripts.Runtime.PlayerStats {
     [CreateAssetMenu( menuName = "Convai/Player Data", fileName = nameof( ConvaiPlayerDataSO ) )]
     public class ConvaiPlayerDataSO : ScriptableObject {
-        [field: SerializeField] public string DefaultPlayerName { get; private set; } = "Player";
+        [field: SerializeField] public string DefaultPlayerName { get;  set; } = "Player";
         [field: SerializeField] public string PlayerName { get; set; }
 
         [field: ReadOnly]

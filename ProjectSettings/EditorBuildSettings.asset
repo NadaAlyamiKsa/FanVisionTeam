@@ -15,6 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Fan AI.unity
     guid: 656e6fbb4d18dab4d953272e19e7a365
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ac93de7566ae2044f9077e09d7c7f2dc, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: a3f479cd246a1de4f8584b65d5467db1, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7a7970b4603a5a94e829affc5f0c9008, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 9cfb797f7b487ed48bc018b3aa66b3cd, type: 2}
